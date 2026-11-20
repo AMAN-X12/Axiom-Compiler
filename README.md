@@ -29,7 +29,7 @@
 - [Error Handling](#-error-handling)
 - [Sample Programs](#-sample-programs)
 - [Documentation](#-documentation)
-- [Team](#-team)
+
 
 ---
 
@@ -487,31 +487,16 @@ The design documents behind the code:
 
 ---
 
-## 🗺️ Roadmap
+## 🗺️ MileStones 
 
 - [x] Lexical analysis (DFAs)
 - [x] Syntax analysis (LL(1) recursive descent)
 - [x] Multi-error reporting
-- [ ] Abstract syntax tree
-- [ ] Semantic analysis (types, scopes, declared-before-use)
-- [ ] Code generation
 
----
 
-## 👥 Team
-
-**Compiler Construction — Group Project**
-
-| Member |
-|---|
-| **Amaan Khan** |
-| **Hasham Ahmad** |
-| **Hamza Afsar** |
-
----
 
 <div align="center">
 
-*Built with ☕ and a lot of `;;`*
+
 
 </div>

@@ -1,0 +1,34 @@
+USE <iostream>
+
+/* greets the user
+non func greet() [
+    print("Enter a number: ");;
+]
+
+/** main program
+    reads n and sums 0..n-1 **/
+number mainClass() [
+    number n;;
+    number sum := 0;;
+    dottednumber pi := 3.14;;
+    char c := 'a';;
+    greet();;
+    input(n);;
+    
+    begin for (number i := 0 ;; i < n ;; inc i)
+        sum +:= i;;
+    endfor
+
+    chk (sum > 10 and not (n chkEqual 0)) [
+        print("Big");;
+    ] otherwise [
+        print("Small\\n");;
+    ]
+]
+
+number func isBig(number v) [
+    chk (v > 10) [
+        return true;;
+    ]
+    return false;;
+]

@@ -1,0 +1,4 @@
+non mainClass() [
+    number x := 5
+    print(x);;
+]

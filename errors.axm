@@ -1,0 +1,10 @@
+number x = 5;;
+number 9abc := 1;;
+word s := "unterminated;;
+flag f := a | b;;
+number y := 3;
+char c := 'a;;
+dottednumber d := 9.39.9;;
+chk (!f) [ ]
+/** never closed
+

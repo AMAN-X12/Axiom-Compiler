@@ -1,0 +1,12 @@
+# compiled programs
+*.exe
+*.o
+*.out
+parser
+lexer
+
+# editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

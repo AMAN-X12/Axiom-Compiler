@@ -1,0 +1,51 @@
+USE <iostream>
+
+make Point [
+    number x;;
+    number y;;
+];;
+
+number func fact(number n) [
+    chk (n <= 1) [ return 1;; ]
+    return n * fact(n - 1);;
+]
+
+non func demo(vector<number> list, word name) [
+    make Point p;;
+    p.x := 3;;
+    number arr(5);;
+    arr{2} +:= p.y * 4;;
+    number a := 1;;
+    number b := 2;;
+    flag ok := not (a chkEqual b) and (a < b or b >= a);;
+    number t := ok ? a : b + 1;;
+    t := a << 2 & b ^ a;;
+    a inc;;
+    inc b;;
+    print("sum = ", a + b * 2, 'x');;
+    input(a);;
+    choose (a) [
+        case 1: print("one");; break;;
+        case 2: print("two");;
+        default: print("many");;
+    ]
+    try [ number z := arr{9};; ] catch [ print("oops");; ]
+    begin while (a < 10)
+        a +:= 2;;
+        chk (a chkEqual 5) [ continue;; ] otherwise chk (a > 8) [ break;; ] otherwise [ a inc;; ]
+    endwhile
+    begin for (number i := 0 ;; i < 10 ;; inc i)
+        print(i);;
+    endfor
+    begin for (;; ;;)
+    endfor
+    [ number inner := (1 + 2) * 3;; ]
+    vector<vector<number>> grid;;
+    vector<number> v := ( );;
+    v := (1, 2, 3);;
+]
+
+non mainClass() [
+    demo(( ), "x");;
+    return;;
+]

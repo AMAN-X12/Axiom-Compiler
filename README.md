@@ -15,7 +15,7 @@
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 - [About](#-about)
 - [Axiom at a Glance](#-axiom-at-a-glance)
@@ -33,7 +33,7 @@
 
 ---
 
-## 🎯 About
+##  About
 
 **Axiom** is a small programming language built for the **Compiler Construction** course. It keeps what C++ does well — typed variables, functions, loops, conditions and exception handling — and changes the syntax: new keywords, new type names and different symbols.
 
@@ -48,7 +48,7 @@ Both phases keep going after an error, so **one run reports every lexical and sy
 
 ---
 
-## 🔭 Axiom at a Glance
+##  Axiom at a Glance
 
 **Hello, world**
 
@@ -154,25 +154,25 @@ non mainClass() [
 
 ## ✨ Features
 
-- 🔤 **Table-driven lexer** — one DFA per token class, run in parallel, longest match wins
-- 🏷️ **12 token types** — keywords, identifiers, numbers, dotted numbers, strings, chars, operators, punctuation, headers, comments, invalid, EOF
-- 🌳 **Recursive-descent parser** — one C++ function per grammar rule, exactly as written in the grammar
-- ⏱️ **Correct precedence and associativity** — one non-terminal per precedence level
-- 🩹 **Multi-error recovery** — lexical *and* syntax errors are all reported in a single run
-- 📍 **Precise messages** — every error has a line, a column and an "expected X but found Y" message
-- 🧭 **Parse-tree view** — switch the tree on to see how the parser derived the program
-- 🖥️ **Interactive menu or command line** — paste code, scan a file, or run the built-in demos
+-  **Table-driven lexer** — one DFA per token class, run in parallel, longest match wins
+-  **12 token types** — keywords, identifiers, numbers, dotted numbers, strings, chars, operators, punctuation, headers, comments, invalid, EOF
+-  **Recursive-descent parser** — one C++ function per grammar rule, exactly as written in the grammar
+-  **Correct precedence and associativity** — one non-terminal per precedence level
+-  **Multi-error recovery** — lexical *and* syntax errors are all reported in a single run
+-  **Precise messages** — every error has a line, a column and an "expected X but found Y" message
+-  **Parse-tree view** — switch the tree on to see how the parser derived the program
+-  **Interactive menu or command line** — paste code, scan a file, or run the built-in demos
 
 ---
 
-## 🧩 How It Works
+##  How It Works
 
 ```mermaid
 flowchart LR
-    A[📄 Axiom source<br/>.axm] --> B[🔤 Lexer<br/>DFAs + keyword table]
-    B -->|tokens| C[🌳 Parser<br/>LL&#40;1&#41; recursive descent]
-    B -.->|lexical errors| E[📋 Error report]
-    C -->|parse tree| D[✅ Syntax OK]
+    A[ Axiom source<br/>.axm] --> B[ Lexer<br/>DFAs + keyword table]
+    B -->|tokens| C[ Parser<br/>LL&#40;1&#41; recursive descent]
+    B -.->|lexical errors| E[ Error report]
+    C -->|parse tree| D[ Syntax OK]
     C -.->|syntax errors| E
 ```
 
@@ -182,7 +182,7 @@ flowchart LR
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 .
@@ -206,7 +206,7 @@ flowchart LR
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Requirements
 
@@ -251,9 +251,9 @@ Press **5** first if you want to see the parse tree.
 
 ---
 
-## 🖨️ Example Output
+##  Example Output
 
-### ✅ A valid program
+###  A valid program
 
 ```text
 $ ./parser valid.axm
@@ -263,7 +263,7 @@ Parse tree:
 Syntax OK: the program follows the Axiom grammar.
 ```
 
-### ❌ A syntax error
+###  A syntax error
 
 `syntax_error.axm`
 
@@ -282,7 +282,7 @@ Syntax error at line 2, column 18: expected ';;' but found 'print'
 
 The missing `;;` is reported *right after the previous token*, which is where you need to fix it.
 
-### 🔤 Lexical errors (all of them at once)
+###  Lexical errors (all of them at once)
 
 `errors.axm` contains one example of every lexical error, and the lexer reports all nine in one pass:
 
@@ -299,7 +299,7 @@ Lexical errors (9):
   line 9, column 1: unterminated multi-line comment (expected closing '**/')
 ```
 
-### 🔎 The token table (lexer demo)
+###  The token table (lexer demo)
 
 ```text
 $ ./lexer sample.axm
@@ -321,7 +321,7 @@ LINE:COL TOKEN          LEXEME                   DETAIL
 
 ---
 
-## 🔤 The Lexer
+##  The Lexer
 
 Every token class has its own **DFA**, stored as a transition table. At each position the lexer runs all of them, keeps the **longest** match, and breaks ties in favour of keywords.
 
@@ -363,7 +363,7 @@ The specification defines **34** keywords; the lexer adds **6** more that Axiom 
 
 ---
 
-## 🌳 The Parser
+##  The Parser
 
 The grammar is plain **BNF** and is **LL(1)**: no FIRST/FIRST or FIRST/FOLLOW conflicts and no left recursion, so every program has exactly one parse tree.
 
@@ -416,7 +416,7 @@ Type checking, declared-before-use, exactly one `mainClass`, and `break`/`contin
 
 ---
 
-## 🩹 Error Handling
+##  Error Handling
 
 The goal: **report everything wrong in one run.**
 
@@ -463,7 +463,7 @@ Syntax error at line 2, column 35: expected an expression but found ';;'
 
 ---
 
-## 🧪 Sample Programs
+##  Sample Programs
 
 | File | What it shows | Expected result |
 |---|---|---|
@@ -475,7 +475,7 @@ Syntax error at line 2, column 35: expected an expression but found ';;'
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 The design documents behind the code:
 
@@ -487,7 +487,7 @@ The design documents behind the code:
 
 ---
 
-## 🗺️ MileStones 
+##  MileStones 
 
 - [x] Lexical analysis (DFAs)
 - [x] Syntax analysis (LL(1) recursive descent)
